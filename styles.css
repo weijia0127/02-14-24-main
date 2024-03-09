@@ -1,0 +1,527 @@
+@font-face {
+  font-family: 'NicoMoji';
+  src: url(./fonts/Nico-Moji/nicomoji/NicoMoji-Regular.ttf) format('truetype'); /* 确保路径正确 */
+}
+
+/************** CSS Reset **************/
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+}
+/* 基本样式 */
+.element {
+  width: 90vw;
+  padding: 5vw;
+}
+
+/* 当视口宽度小于600px时 */
+@media (max-width: 600px) {
+  .element {
+    width: 100vw;
+    padding: 10vw;
+  }
+}
+
+
+
+/*f封面*/
+#coverpage {
+  overflow: hidden;
+  margin-top: 5%;
+  display: grid; /* 使用grid布局 */
+  width:100%; /* 根据需要调整宽度 */
+  height: 100%; /* 视口高度 */
+  grid-template-columns: 1fr; /* 一列 */
+  grid-template-rows: 1fr; /* 一行 */
+}
+
+.coverimage, #covertext {
+  grid-column: 1; /* 两者都占据第一列 */
+  grid-row: 1; /* 两者都占据第一行 */
+}
+
+.coverimage img {
+  max-width: 100%; /* 宽度100% */
+  height: 100%; /* 高度100% */
+  object-fit: contain; /* 覆盖整个容器 */
+}
+
+#covertext {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  color: white; /* 文本颜色，根据图片背景调整 */
+  z-index: 2; /* 确保文本在图片之上 */
+  margin-left:2%;
+}
+
+.title {
+  font-family: 'NicoMoji', sans-serif;
+  font-size:x-large;
+  color: #00C2FF;
+  z-index: 2;
+  display: flex;
+  align-self: start;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+.subtitle {
+  margin-left: 5%;
+  width:10%;
+  font-size: 6vw;
+  height:20vw;
+
+}
+
+.subtitle span{
+  color: #00C2FF;
+}
+
+.description1 {
+  font-size: 1vw;
+  width:30%;
+  margin-left: 10%;
+
+}
+
+.footer {
+  margin-bottom: 5%;
+  margin-left: 10%;
+  font-size:0.8vw;
+  color: #FFF;
+
+}
+
+/* 产品信息页 */
+
+
+.about-product {
+  margin-left: 5%;
+  margin-top: 5%;
+  width: 5vw;
+  font-family: 'Noto Sans Tamil', sans-serif;
+  font-weight: 400;
+  font-size: 7vw;
+  letter-spacing: 0.01em;
+  color: #FFFFFF;
+}
+
+
+.page2 {
+  margin-left: 5%;
+  display: flex;
+  justify-content: space-between; /* 将子元素分别对齐到容器的左边和右边 */
+  align-items: flex-start; /* 如有需要，确保子元素从容器的顶部开始对齐 */
+}
+
+.left, .right {
+  flex: 1; /* 让子元素占据可用空间，但也可以根据需要调整它们的宽度 */
+}
+
+.mushroom-hunter {
+  font-family: 'Oxanium', sans-serif;
+  font-weight: 400;
+  font-size: 4vw;
+  letter-spacing: 0.03em;
+  color: #00C2FF;
+  margin-top: 5%;
+}
+
+.quest , .at {
+  margin-top: 10%;
+  width: 70%;
+  height: auto;
+  font-family: 'Nikukyu', sans-serif;
+  font-weight: 400;
+  font-size: 1.5vw;
+  letter-spacing: 0.08em;
+  color: #FFFFFF;
+  line-height: 1.5em;
+}
+
+.mushroomicon {
+    margin-top: 10%;
+    margin-bottom:1%;
+    width: 20%;
+    height: auto;
+  }
+
+.mushroom-image {
+  margin-left: 20%;
+  margin-top: 40%;
+  width: 80%;
+  height: 20%;
+}
+
+.terrains {
+  margin-left: 20%;
+  font-size: 5vw;
+  color: #FFFFFF;
+}
+
+.terrain-description {
+  margin-bottom: 10%;
+  margin-top: 5%;
+  margin-left: 20%;
+  width: 70%;
+  height: auto;
+  font-family: 'Nikukyu', sans-serif;
+  font-weight: 400;
+  font-size: 1.5vw;
+  letter-spacing: 0.08em;
+  color: #FFFFFF;
+  line-height: 1.5em;
+}
+
+.new-container {
+  background-color:#FFFFFF; /* 使用十六进制颜色代码 */
+}
+
+
+/**** find out more details ****/
+.find {
+  margin-left: 5%;
+  margin-top: 5%;
+  color: #000000;
+  font-size: 7vw;
+}
+.highlight {
+  color: #00C2FF;
+}
+
+.content {
+  font-family: 'Nikukyu', sans-serif;
+  font-weight: 400;
+  margin: 2%;
+  margin-top: 10%;
+  margin-bottom:20%;
+  display:flex;
+  flex-flow:nowrap;
+  flex-direction: row;
+  place-content: center; 
+  align-items: flex-end;
+}
+
+.p5 {
+    flex: 0 1 200px; 
+    align-self: flex-start;
+}
+.p4 {
+  flex: 0 1 1200px; 
+  align-self: flex-start;
+}
+.p3 {
+  align-self: flex-start; /* 使该元素在交叉轴上对齐到容器的起始位置 */
+  flex: 0 1 1900px;
+}
+.p2 {
+  flex: 0 1 1000px;
+  align-self: flex-end;
+  
+}
+.p1 {
+  flex: 0 1 1000px;
+  align-self:flex-end;
+}
+
+.more {
+  color: #F3F3F3;
+  font-size: 0.8em;
+  margin-top: -70%;
+  margin-left: 10%;
+}
+.learn {
+  color: #F3F3F3;
+  font-size: 0.1em;
+  margin-top: -1%;
+  margin-left: 10%;
+}
+
+
+/* QnA */
+.moti {
+  font-family: 'Noto Sans Tamil', sans-serif;
+  font-weight: 400;
+  margin-top: 5%;
+  margin-left: 5%;
+  color: #FFFFFF;
+  font-size: 7vw;
+}
+
+.rectangle-image{
+  width:7%;
+  padding:1%;
+}
+
+.qatext {
+  font-size: 1vw;
+  letter-spacing: 0.1em;
+  margin-top: 1%;
+  display: flex;
+  flex-direction: column;
+}
+.answer {
+  color: #1d1d1d; 
+}
+
+
+.rectangle-7 {
+  border-radius: 10px;
+  background:  #CDCDCD;
+  opacity: 1;
+  display: flex; /* 启用Flexbox布局 */
+  align-items: center; /* 垂直居中 */
+  justify-content: start; /* 水平居中 */
+  width: 95%; /* 或指定宽度 */
+  height: 40%; /* 或指定高度 */
+  margin-left: 1%;
+  margin-top: 5%; 
+  opacity: 1;
+}
+
+.rectangle-8 {
+    border-radius: 10px;
+    background:  #CDCDCD;
+    opacity: 1;
+    display: flex; /* 启用Flexbox布局 */
+    align-items: center; /* 垂直居中 */
+    justify-content: start; /* 水平居中 */
+    width: 95%; /* 或指定宽度 */
+    height: 40%; /* 或指定高度 */
+    margin-left: 1%;
+    margin-top: 3%; 
+    opacity: 1;
+}
+
+.rectangle-9 {
+  border-radius: 10px;
+  background:  #CDCDCD;
+  opacity: 1;
+  display: flex; /* 启用Flexbox布局 */
+  align-items: center; /* 垂直居中 */
+  justify-content: start; /* 水平居中 */
+  width: 95%; /* 或指定宽度 */
+  height: 40%; /* 或指定高度 */
+  margin-left: 1%;
+  margin-top: 3%; 
+  opacity: 1;
+}
+.rectangle-10 {
+  border-radius: 10px;
+  background:  #CDCDCD;
+  opacity: 1;
+  display: flex; /* 启用Flexbox布局 */
+  align-items: center; /* 垂直居中 */
+  justify-content: start; /* 水平居中 */
+  width: 95%; /* 或指定宽度 */
+  height: 40%; /* 或指定高度 */
+  margin-left: 1%;
+  margin-top: 3%; 
+  margin-bottom:5%;
+  opacity: 1;
+}
+
+/*悬浮效果*/
+.rectangle-7:hover {
+  width: 140%; 
+  height: 100%; 
+  background-color:#00C2FF;
+}
+.rectangle-8:hover {
+  width: 140%; 
+  height: 100%; 
+  background-color:#00C2FF;
+}
+.rectangle-9:hover {
+  width: 140%; 
+  height: 100%; 
+  background-color:#00C2FF;
+}
+.rectangle-10:hover {
+  width: 140%; 
+  height: 100%; 
+  background-color:#00C2FF;
+}
+
+/*草图草图*/
+.sketch {
+  background: #F3F3F3;
+}
+
+.sketches-title {
+  
+  font-family: 'Noto Sans Tamil', sans-serif;
+  font-size: 7vw;
+  margin-top: 5%;
+  margin-left:5%;
+  letter-spacing: 0.03em;
+  color: #00C2FF;
+}
+
+.sketches-images {
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  align-items:center;
+  overflow:hidden;
+  justify-content: space-around;
+  margin-top: 2%;
+  margin-bottom: 4%;
+  max-width:100%;
+}
+
+.sketch1 {
+  width:25%;
+}
+.sketch2 {
+  width:35%;
+}
+.sketch3 {
+  width:40%;
+}
+
+.sketches-description {
+  width:70%;
+  margin-left: 8%;
+  margin-bottom: 6%;
+  font-family: 'Nikukyu', sans-serif;
+  font-size: 1.6vw;
+  letter-spacing: 0.08em;
+  color: #000000;
+}
+
+/*想死了，gif*/
+
+
+.component-title {
+  font-family: 'Noto Sans Tamil', sans-serif;
+  font-weight: 400;
+  margin-top: 5%;
+  margin-left: 45%;
+  color: #FFFFFF;
+  font-size: 7vw;
+  background: linear-gradient(270deg, rgba(127, 127, 127, 0) 0%, #00C2FF 79.72%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gif {
+  width:100%;
+  object-fit: cover;
+}
+
+/***slogan8****/
+
+.slogan {
+  background-color: #E2E2E2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  padding:20%;
+}
+
+.big {
+  font-weight: 500;
+  font-family: 'Al Nile';
+  text-align:center;
+  align-self: center;
+  width:90%;
+  font-size: 3vw;
+  margin-bottom: 2%;
+}
+
+.small {
+  margin-top: 1%;
+  font-size:1.5vw;
+  align-self:center;
+}
+
+/***循环动画***/
+
+.move {
+  width:100%;
+  object-fit: cover;
+}
+
+/***prototype vedio***/
+
+.proto {
+    width: 100%; /* 将视频宽度设置为容器宽度的50% */
+    height: auto; /* 高度自动调整 */
+  }
+
+/*** lasttitle ***/
+.foot {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.mycorover {
+  font-family: 'NicoMoji', sans-serif;
+  font-size:x-large;
+  color: #00C2FF;
+  z-index: 2;
+  align-self: center;
+  margin-top: 10%;
+}
+.come {
+  font-weight: 100;
+  align-self: center;
+  font-family:'Nikukyu', sans-serif;
+  color:#FFFFFF;
+  margin-top:1%;
+
+}
+/***导航*/
+.menu {
+  width:5%;
+  margin-top: 2%;
+  margin-left: 80%;
+}
+.menu-hover{
+    opacity: 0.1;      /* 鼠标悬停时改变图片透明度 */
+  }
+  
+
+
+/************** End CSS Reset **************/
+
+#omars-container {
+  width: 100vw;
+}
+
+/* Media Query */
+@media (max-width: 768px) {
+ 
+}
